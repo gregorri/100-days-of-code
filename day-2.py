@@ -23,10 +23,10 @@
 #weeks_remaining = years_remaining * 52
 #print(f"You have {days_remaining} days, {weeks_remaining} weeks, and {years_remaining} years left.")
 
-print("Welcome to the tip calculator.")
-total_bill = float(input("What was the total bill? $"))
-tip = int(input("What percentage tip would you like to give? 10, 12, or 15? "))
-people = int(input("How many people to split the bill? "))
-bill_per_person = round((total_bill * (1 + tip / 100)) / people, 2)
-bill_per_person = "{:.2f}".format(bill_per_person)
-print(f"Each person should pay: ${bill_per_person}")
+# print("Welcome to the tip calculator.")
+# total_bill = float(input("What was the total bill? $"))
+# tip = int(input("What percentage tip would you like to give? 10, 12, or 15? "))
+# people = int(input("How many people to split the bill? "))
+# bill_per_person = round((total_bill * (1 + tip / 100)) / people, 2)
+# bill_per_person = "{:.2f}".format(bill_per_person)
+# print(f"Each person should pay: ${bill_per_person}")
