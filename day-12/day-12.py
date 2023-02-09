@@ -2,6 +2,9 @@ from art import logo
 import random
 import os
 
+EASY_LIVES = 10
+HARD_LIVES = 5
+
 print(logo)
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
@@ -14,9 +17,9 @@ def game_lvl():
     """Choose a difficulty level."""
     level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     if level == "easy":
-        return 10
+        return EASY_LIVES
     elif level == "hard":
-        return 5
+        return HARD_LIVES
     else:
         print("Invalid input. Please try again.")
         game_lvl()
