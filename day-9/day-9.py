@@ -43,54 +43,54 @@
 
 # add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
 # print(travel_log)
-from replit import clear
-from art import logo
+# from replit import clear
+# from art import logo
 
-print(logo)
-print("Welcome to the secret auction program.")
-bids = {}
-bidding_finished = False
-while not bidding_finished:
-    name = input("What is your name?: ")
-    price = int(input("What's your bid?: $"))
-    bids[name] = price
-    should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
-    if should_continue == "no":
-        bidding_finished = True
-        highest_bid = 0
-        winner = ""
-        for bidder in bids:
-            bid_amount = bids[bidder]
-            if bid_amount > highest_bid:
-                highest_bid = bid_amount
-                winner = bidder
-        print(f"The winner is {winner} with a bid of ${highest_bid}")
-    elif should_continue == "yes":
-        clear()
-bids = {}
+# print(logo)
+# print("Welcome to the secret auction program.")
+# bids = {}
+# bidding_finished = False
+# while not bidding_finished:
+#     name = input("What is your name?: ")
+#     price = int(input("What's your bid?: $"))
+#     bids[name] = price
+#     should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+#     if should_continue == "no":
+#         bidding_finished = True
+#         highest_bid = 0
+#         winner = ""
+#         for bidder in bids:
+#             bid_amount = bids[bidder]
+#             if bid_amount > highest_bid:
+#                 highest_bid = bid_amount
+#                 winner = bidder
+#         print(f"The winner is {winner} with a bid of ${highest_bid}")
+#     elif should_continue == "yes":
+#         clear()
+# bids = {}
 
-# while True:
-#   name = input("Enter your name: ")
-#   bid = input("Enter your bid: ")
+while True:
+  name = input("Enter your name: ")
+  bid = input("Enter your bid: ")
   
-#   # Check if bid is valid
-#   if bid.isdigit() == False:
-#     print("Invalid bid, please enter a number.")
-#     continue
-#   bid = int(bid)
+  # Check if bid is valid
+  if bid.isdigit() == False:
+    print("Invalid bid, please enter a number.")
+    continue
+  bid = int(bid)
   
-#   bids[name] = bid
+  bids[name] = bid
   
-#   another_bidder = input("Is there another bidder? (yes/no) ")
-#   if another_bidder.lower() == "no":
-#     break
-#   else:
-#     print("\033c") # Clear the screen for the next bidder
+  another_bidder = input("Is there another bidder? (yes/no) ")
+  if another_bidder.lower() == "no":
+    break
+  else:
+    print("\033c") # Clear the screen for the next bidder
 
-# # Determine the winner and their winning bid
-# winning_bid = max(bids.values())
-# winner = [key for key, value in bids.items() if value == winning_bid]
+# Determine the winner and their winning bid
+winning_bid = max(bids.values())
+winner = [key for key, value in bids.items() if value == winning_bid]
 
-# # Print the winner and their winning bid
-# print("The winner is:", winner[0])
-# print("Winning bid:", winning_bid)
+# Print the winner and their winning bid
+print("The winner is:", winner[0])
+print("Winning bid:", winning_bid)
