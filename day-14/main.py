@@ -1,6 +1,7 @@
 from art import logo, vs
 from info import data
 import random
+from replit import clear
 
 def format_data(account):
     """Format the account data into printable format: name, description and country."""
@@ -38,7 +39,10 @@ def game():
         b_follower_count = account_b["follower_count"]
         is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
-        if is_correct:
+        clear()
+        print(logo)
+
+        if is_correct: 
             score += 1
             print(f"You're right! Current score: {score}.")
         else:
