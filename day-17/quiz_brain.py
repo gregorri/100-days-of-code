@@ -33,24 +33,6 @@ class QuizBrain:
         print(f"The correct answer was: {correct_answer}.")
         print(f"Your current score is: {self.score}/{self.question_number}")
 
-    def choose_question_category(self):
-        """Choose the category of the quiz."""
-        category_list = ['general knowledge', 'books', 'film', 'music', 'musicals & theatres', 'television', 'video games', 'board games', 'science & nature',
-                         'computers', 'science: mathematics', 'mythology', 'sports', 'geography', 'history', 'politics', 'art', 'celebrities', 'animals', 'vehicles',
-                         'comics', 'gadgets', 'japanese anime & manga', 'cartoon & animations']
-        category = input(f"Choose category  General Knowledge, Books, Film, Music, Musicals & Theatres, Television, Video Games, Board Games, Science & Nature, "
-                         f"Computers, Mathematics, Mythology, Sports, Geography, History, Politics, Art, Celebrities, Animals, Vehicles, Comics, Gadgets, "
-                         f"Japanese Anime & Manga, Cartoon & Animations): ").lower()
-        if category in category_list:
-            print(f"You have chosen {category} category.")
-        elif category_list != category:
-            print("Invalid input. Please choose a valid category.")
-        else:
-            print("Invalid input. Please choose a valid category.")
-        self.question_list = [question for question in self.question_list if question.category == category]
-        return self.question_list
-
-
     def choose_difficulty_level(self):
         """Choose the difficulty level of the quiz."""
         difficulty_level = ['easy', 'medium', 'hard']
