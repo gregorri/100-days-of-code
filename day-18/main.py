@@ -18,6 +18,11 @@ def draw_shape(num_sides):
 		tim.forward(100)
 		tim.right(angle)
 
+def draw_spirograph(size_of_gap):
+	for _ in range(int(360 / size_of_gap)):
+		tim.color(random_color())
+		tim.circle(100)
+		tim.setheading(tim.heading() + size_of_gap)
 
 for shape_side_n in range(3, 11):
 	draw_shape(shape_side_n)
