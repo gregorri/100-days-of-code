@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
@@ -16,7 +16,7 @@ food = Food()
 scoreboard = Scoreboard()
 
 
-# Listen for keypresses to move the snake
+# Listen for key-presses to move the snake
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
@@ -26,8 +26,8 @@ screen.onkey(snake.right, "Right")
 
 game_is_on = True
 while game_is_on:
-	screen.update() # update screen
-	time.sleep(0.1) # delay
+	screen.update()     # update screen
+	time.sleep(0.1)     # delay
 	snake.move()
 
 	# Detect collision with food
