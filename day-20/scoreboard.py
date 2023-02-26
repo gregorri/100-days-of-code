@@ -26,3 +26,6 @@ class Scoreboard(Turtle):
 		self.clear()
 		self.update_scoreboard()
 
+	def score(self):
+		pass
+
