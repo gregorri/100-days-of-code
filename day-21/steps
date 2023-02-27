@@ -1,0 +1,13 @@
+Import the Turtle and random modules.
+
+Create the screen, paddles, and ball with their initial properties.
+
+Define functions to move the ball and paddles.
+
+Keep track of the score and update it when the ball hits the opponent's side.
+
+Determine the game outcome by checking if either player has reached the maximum score.
+
+Use a while loop to continuously update the ball and paddle movements, check for collisions and score updates, and check for the game outcome.
+
+Delete the Turtle objects and close the screen when the game is over.
