@@ -19,12 +19,9 @@ class Paddle(Turtle):
 
 	def go_down(self):
 		new_y = self.ycor() - 20
-		self.sety(new_y)
 		self.goto(self.xcor(), new_y)
 
-	def move_the_paddle(self):
-		self.go_up()
-		self.go_down()
 
 	def reset_position(self):
 		self.goto(-380, 0)
+
