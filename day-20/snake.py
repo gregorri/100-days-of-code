@@ -57,4 +57,12 @@ class Snake:
 		if self.head.heading() != LEFT:
 			self.head.setheading(RIGHT)
 
+	def reset(self):
+		"""Reset the snake"""
+		for seg in self.all_segments:
+			seg.goto(1000, 1000)
+		self.all_segments.clear()
+		self.create_snake()
+		self.head = self.all_segments[0]
+
 
