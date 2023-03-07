@@ -3,20 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Users\cuplyk\Desktop\it_states.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\cuplyk\Desktop\us-states-game-start\50_states.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\day-16\data.csv">
           <value>
             <Attribute>
@@ -25,13 +11,6 @@
           </value>
         </entry>
         <entry key="\day-25\2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\day-25\it-states\Regioni_d_Italia.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
