@@ -1,8 +1,22 @@
 from tkinter import *
 from tkinter import messagebox
+import random
+import pyperclip
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+def generate_password():
+
+	password_entry.delete(0, END)  # delete the content of the entry
+	letters = [chr(i) for i in range(65, 91)] + [chr(i) for i in range(97, 123)] # list comprehension
+	symbols = [chr(i) for i in range(33, 48)] + [chr(i) for i in range(58, 65)] + [chr(i) for i in range(91, 97)] + [chr(i) for i in range(123, 127)]
+	numbers = [str(i) for i in range(10)]
+	password_list = [random.choice(letters) for _ in range(random.randint(8, 10))] + [random.choice(symbols) for _ in range(random.randint(2, 4))] + [random.choice(numbers) for _ in range(random.randint(2, 4))]
+	random.shuffle(password_list)   # shuffle the list to mix the characters and symbols in a random order
+	password = "".join(password_list)
+	password_entry.insert(0, password)  # insert the password in the entry
+	pyperclip.copy(password)  # copy the password to the clipboard
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
@@ -55,7 +69,7 @@ password_entry = Entry(width=26)
 password_entry.grid(column=1, row=3)
 
 # Buttons
-generate_password_button = Button(text="Generate Password", )
+generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(column=2, row=3)
 add_button = Button(text="Add", width=38, command=save)
 add_button.grid(column=1, row=4, columnspan=2)
